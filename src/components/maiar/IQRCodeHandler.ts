@@ -1,3 +1,3 @@
 export interface IQRCodeHandler {
-    handle(data: string, element: HTMLElement): Promise<any>
+  handle(data: string, element: HTMLElement): Promise<any>
 }
