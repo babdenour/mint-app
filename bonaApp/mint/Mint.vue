@@ -4,6 +4,7 @@
     <div class="mint__error">{{ error ? error : ' ' }}</div>
     <div class="mint">
       <button @click.prevent="sendF()">Mint!</button>
+      <p>Note: MAX 6 per wallet address.</p>
     </div>
   </div>
 </template>

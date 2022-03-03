@@ -5,11 +5,10 @@ import Providers from "../../src/providers/Providers";
 
 const Codec = new BinaryCodec();
 const gasLimite = 18000000;
-const ScAddress = process.env.ScAddress;
-const sca = "erd1qqqqqqqqqqqqqpgqrx0c82m2pfxxw6pv7n337xz4cupqunvaxfzqmp6wgj";
+const scAddress = "erd1qqqqqqqqqqqqqpgqrx0c82m2pfxxw6pv7n337xz4cupqunvaxfzqmp6wgj";
 
 class MintSC {
-  private readonly smartContractAddress: string = sca
+  private readonly smartContractAddress: any = scAddress
   private _provider: Providers;
   constructor(provider: Providers) {
     this._provider = provider;
