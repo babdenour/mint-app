@@ -15,7 +15,7 @@ const webpack_config = merge(common,
       path: path.resolve(__dirname, '../docs'),
       filename: 'build-bonaApp.js',
       clean: true,
-      publicPath: '/vue-erdjs/'
+      publicPath: '/mint-app/'
     },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -53,7 +53,7 @@ const webpack_config = merge(common,
       },
     },
     historyApiFallback: {
-      index: '/vue-erdjs/index.html'
+      index: '/mint-app/index.html'
     },
   },
   devtool: 'inline-source-map'
