@@ -1,4 +1,5 @@
 var path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const { merge } = require("webpack-merge")
 const common = require("./webpack.config.common")
@@ -17,6 +18,9 @@ module.exports = merge(common, {
       type: 'umd',
     },
   },
+  plugins: [
+    new HtmlWebpackPlugin({})
+  ],
   externals: {
     'vue': {
       commonjs: 'vue',
