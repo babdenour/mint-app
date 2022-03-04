@@ -5,10 +5,7 @@ const { merge } = require("webpack-merge")
 const common = require("./webpack.config.common")
 
 module.exports = merge(common, {
-  entry: {
-    index: './src/index.ts',
-    'index.min': './src/index.ts'
-  },
+  entry: './bonaApp/main.ts',
   output: {
     clean: true,
     path: path.resolve(__dirname, '../dist'),
