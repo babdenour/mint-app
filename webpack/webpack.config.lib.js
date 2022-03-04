@@ -19,7 +19,10 @@ module.exports = merge(common, {
     },
   },
   plugins: [
-    new HtmlWebpackPlugin({})
+    new HtmlWebpackPlugin({
+      title: 'Vue Erd bona Parks App',
+      template: path.resolve(__dirname, '../bonaApp/template.html'),
+  }),
   ],
   externals: {
     'vue': {
