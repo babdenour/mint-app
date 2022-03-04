@@ -17,46 +17,46 @@ const webpack_config = merge(common,
       clean: true,
       publicPath: '/mint-app/'
     },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      title: 'Vue Erd bona Parks App',
-      template: path.resolve(__dirname, '../bonaApp/template.html'),
-      showErrors: true
-    }),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: "src/_docs/",
-          to: "plugin/"
-        }
-      ],
-    }),
-    new FileManagerPlugin({
-      events: {
-        onEnd: [{
-          copy: [
-            {
-              source: 'docs/index.html',
-              destination: 'docs/404.html'
-            }
-          ]
-        }]
-        }
-      })
-  ],
-  devServer: {
-    client: {
-      overlay: {
-        errors: true,
-        warnings: false,
+    plugins: [
+      new webpack.HotModuleReplacementPlugin(),
+      new HtmlWebpackPlugin({
+        title: 'Vue Erd bona Parks App',
+        template: path.resolve(__dirname, '../bonaApp/template.html'),
+        showErrors: true
+      }),
+      new CopyPlugin({
+        patterns: [
+          {
+            from: "src/_docs/",
+            to: "plugin/"
+          }
+        ],
+      }),
+      new FileManagerPlugin({
+        events: {
+          onEnd: [{
+            copy: [
+              {
+                source: 'docs/index.html',
+                destination: 'docs/404.html'
+              }
+            ]
+          }]
+          }
+        })
+    ],
+    devServer: {
+      client: {
+        overlay: {
+          errors: true,
+          warnings: false,
+        },
+      },
+      historyApiFallback: {
+        index: '/mint-app/index.html'
       },
     },
-    historyApiFallback: {
-      index: '/mint-app/index.html'
-    },
-  },
-  devtool: 'inline-source-map'
+    devtool: 'inline-source-map'
   }
 )
 
