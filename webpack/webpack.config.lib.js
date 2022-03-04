@@ -19,17 +19,8 @@ module.exports = merge(common, {
     new HtmlWebpackPlugin({
       title: 'Vue Erd bona Parks App',
       template: path.resolve(__dirname, '../bonaApp/template.html'),
-  }),
+    }),
   ],
-  externals: {
-    'vue': {
-      commonjs: 'vue',
-      commonjs2: 'vue',
-      amd: 'vue',
-      root: 'Vue'
-    },
-    '@elrondnetwork/erdjs': '@elrondnetwork/erdjs'
-  },
   devtool: false,
   optimization: {
     minimize: true,
