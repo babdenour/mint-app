@@ -32,7 +32,7 @@
 <script>
 import VueErdjsTab from "./VueErdjsTab.vue";
 import QRCodeDefaultHandler from "./maiar/QRCodeDefaultHandler";
-import Mint from "../../bonaApp/mint/Mint.vue";
+import Mint from "../mint/Mint.vue";
 
 export default {
   components: { VueErdjsTab, Mint },

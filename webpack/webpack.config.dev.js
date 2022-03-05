@@ -10,7 +10,7 @@ const FileManagerPlugin = require('filemanager-webpack-plugin');
 const webpack_config = merge(common,
   {
     mode: 'development',
-    entry: './bonaApp/main.ts',
+    entry: './src/main.ts',
     output: {
       path: path.resolve(__dirname, '../docs'),
       filename: 'build-bonaApp.js',
@@ -21,16 +21,8 @@ const webpack_config = merge(common,
       new webpack.HotModuleReplacementPlugin(),
       new HtmlWebpackPlugin({
         title: 'Vue Erd bona Parks App',
-        template: path.resolve(__dirname, '../bonaApp/template.html'),
+        template: path.resolve(__dirname, '../src/template.html'),
         showErrors: true
-      }),
-      new CopyPlugin({
-        patterns: [
-          {
-            from: "src/_docs/",
-            to: "plugin/"
-          }
-        ],
       }),
       new FileManagerPlugin({
         events: {

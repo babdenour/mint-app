@@ -1,0 +1,16 @@
+.mint > button {
+  margin-top: 2vh;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  background: #d02561;
+  cursor: pointer;
+  transition: all 0.5s;
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    background: white;
+    color: #d02561;
+  }
+}

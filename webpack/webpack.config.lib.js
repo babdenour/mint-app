@@ -5,7 +5,7 @@ const { merge } = require("webpack-merge")
 const common = require("./webpack.config.common")
 
 module.exports = merge(common, {
-  entry: './bonaApp/main.ts',
+  entry: './src/main.ts',
   output: {
     clean: true,
     path: path.resolve(__dirname, '../dist'),
@@ -18,7 +18,7 @@ module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Vue Erd bona Parks App',
-      template: path.resolve(__dirname, '../bonaApp/template.html'),
+      template: path.resolve(__dirname, '../public/index.html'),
     }),
   ],
   externals: {
@@ -49,5 +49,6 @@ module.exports = merge(common, {
       }),
     ]
   },
+  target: ['web'],
 }
 )
